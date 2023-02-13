@@ -1,9 +1,13 @@
 import React from 'react';
 
+import Vendor from './components/Vendor/Vendor';
+
 function App() {
   return (
     <>
-      <main></main>
+      <main>
+        <Vendor />
+      </main>
     </>
   );
 }

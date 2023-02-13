@@ -1,0 +1,14 @@
+.sidebar {
+  background-color: #21263c;
+  color: white;
+}
+.sidebar li {
+  margin-bottom: 5px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.sidebar li:hover {
+  background-color: #181c2e;
+}
