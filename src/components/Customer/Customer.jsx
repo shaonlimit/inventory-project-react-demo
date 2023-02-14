@@ -19,6 +19,17 @@ const Customer = () => {
     <div className='Customer'>
       <h3 className='text-4xl font-medium shadow mb-4'>New Customer</h3>
       <form action=''>
+        <div className='customer-type-container grid grid-cols-4 mb-4'>
+          <label htmlFor=''>Customer Type</label>
+          <div className='flex gap-2'>
+            <input type='radio' name='customer-type' id='business' />
+            <label htmlFor='business' className='mr-2'>
+              Business
+            </label>
+            <input type='radio' name='customer-type' id='individual' />
+            <label htmlFor='individual'>Individual</label>
+          </div>
+        </div>
         <VendorTop />
       </form>
       <VendorNavbar />
