@@ -22,7 +22,7 @@ const ContactPerson = ({ tableRowData, buttonText }) => {
         </thead>
         <tbody>
           {tableRow.map((item, index) => (
-            <tr>
+            <tr key={index}>
               <td>
                 <input
                   type='text'
@@ -59,7 +59,9 @@ const ContactPerson = ({ tableRowData, buttonText }) => {
                   className='border  p-1 focus:outline-1 outline-slate-400'
                 />
               </td>
-              <button onClick={() => removeRow(index)}>Remove</button>
+              <td>
+                <button onClick={() => removeRow(index)}>Remove</button>
+              </td>
             </tr>
           ))}
         </tbody>
