@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ContactPerson = () => {
+const ContactPerson = ({ tableRowData, buttonText }) => {
   const [tableRow, setTableRow] = useState([{}]);
   const handleTableRow = () => {
     setTableRow([...tableRow, {}]);
@@ -15,12 +15,9 @@ const ContactPerson = () => {
       <table className='w-full'>
         <thead>
           <tr>
-            <td>Salutation</td>
-            <td>First Name</td>
-            <td>Last Name</td>
-            <td>Email Address</td>
-            <td>Work Phone</td>
-            <td>Mobile</td>
+            {tableRowData.map((item, index) => (
+              <td key={index}>{item.title}</td>
+            ))}
           </tr>
         </thead>
         <tbody>
@@ -67,7 +64,7 @@ const ContactPerson = () => {
           ))}
         </tbody>
       </table>
-      <button onClick={handleTableRow}>+ Add Contact Person</button>
+      <button onClick={handleTableRow}>{buttonText}</button>
     </>
   );
 };

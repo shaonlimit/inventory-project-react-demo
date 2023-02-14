@@ -7,6 +7,14 @@ import VendorNavbar from './VendorNavbar';
 import VendorTop from './VendorTop';
 
 const Vendor = () => {
+  const tableRowData = [
+    { title: 'Salutation' },
+    { title: 'First Name' },
+    { title: 'Last Name' },
+    { title: 'Email Address' },
+    { title: 'Work Phone' },
+    { title: 'Mobile' },
+  ];
   return (
     <div className='vendor'>
       <h3 className='text-4xl font-medium shadow mb-4'>New Vendor</h3>
@@ -16,7 +24,10 @@ const Vendor = () => {
       <VendorNavbar />
       <OtherDetails />
       <Address />
-      <ContactPerson />
+      <ContactPerson
+        tableRowData={tableRowData}
+        buttonText='+ Add Contact Person'
+      />
       <Remarks />
     </div>
   );
