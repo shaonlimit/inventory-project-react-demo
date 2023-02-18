@@ -15,6 +15,7 @@ const CreateItemGroup = () => {
           htmlFor='goods'
           labelText={'Goods'}
         />
+        
         <ItemRadioButton
           type={'radio'}
           name='sameName'
